@@ -13,11 +13,15 @@ jobs:
         working-directory: ./demo-test-jib
 
     steps:
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+      - name: install jdk 17
+        uses: actions/seput-java@v3
+        with:
+          java-version: 17
+          distribution: 'temurin'
+          cache: 'maven'
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      - name: build with maven
+        run: ./mvnw verify
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.pblgllgs</groupId>
-	<artifactId>demo-test-jib-app</artifactId>
+	<artifactId>demo-test-jib</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo-test-jib</name>
-	<description>demo-test-jib-app</description>
+	<description>demo-test-jib</description>
 	<properties>
 		<java.version>17</java.version>
 		<docker.username>pblgllgs</docker.username>
