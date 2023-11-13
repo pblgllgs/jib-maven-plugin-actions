@@ -27,5 +27,6 @@ jobs:
 
       - name: Build and push
         run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           ./mvnw clean package -DskipTests
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker push pblgllgs/demo-test-jib:latest
