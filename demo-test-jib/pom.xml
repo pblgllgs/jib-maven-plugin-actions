@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.pblgllgs</groupId>
 	<artifactId>demo-test-jib</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>demo-test-jib</name>
 	<description>demo-test-jib</description>
 	<properties>
