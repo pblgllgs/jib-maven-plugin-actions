@@ -25,8 +25,9 @@ jobs:
       - name: build with maven
         run: ./mvnw verify
 
-      - name: Build and push
+      - if: ${{ github.ref == 'refs/heads/master' }}
+        name: Build and push
         run: |
-          ./mvnw clean package -DskipTests
+          ./mvnw clean package jib:dockerBuild -DskipTests
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker push ${{ secrets.DOCKER_USERNAME }}/demo-test-jib
