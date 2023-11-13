@@ -26,4 +26,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push
-        run: mvn clean package -DskipTests
+        run: ./mvnw clean package -DskipTests
